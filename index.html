@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>☀️잠케어🌙</title>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+		html{
+			font-family: 'NanumGothicLight';
+			font-family: 'NanumGothic';
+			font-family: 'NanumGothicBold';
+			font-family: 'NanumGothicExtraBold';
+			font-optical-sizing: auto;
+		  	font-weight: 200;
+		  	font-size: 16px;
+		  	word-break: keep-all;
+		  	scroll-behavior: smooth;
+		  	background: #fff;}
+		section{padding-top: 50px;}
+		.wrap{width: 800px; margin: auto; position: relative;}
+
+		.flex{display: flex; justify-content: space-between;}
+		body{  -ms-overflow-style: none;
+ 			}
+
+		::-webkit-scrollbar {
+			  display: none;
+			 }
+		.flex-h{display: flex; 
+				flex-wrap: wrap}
+		.w50{width: 54%}
+
+		nav,body,h1,h2,p,ol,ul,li
+			{margin: 0; padding: 0;
+			}
+		h1{font-family: 'NanumGothicExtraBold';
+		font-weight: 800; font-size: 3rem; padding-bottom: 10px;}
+		h2{font-family: 'NanumGothicBold';
+		font-weight: 800; font-size: 2.5rem; padding-top: 10px; padding-left: 50px; padding-right: 50px; padding-bottom: 25px; line-height: 1.5}
+		h3{font-family: 'NanumGothicBold';
+		font-weight: 800; font-size: 2.3rem; line-height: 1.4; margin: 20px 0px ;
+	}
+		p{font-family: 'NanumGothic';
+			line-height: 1.5}
+
+		header{padding: 550px 0px;}
+		footer{padding-bottom: 100px;
+		padding-top: 300px}
+
+		.logo h1{font-size: 1rem; padding: 8px 12px; cursor: pointer;}
+
+		.bg-header{
+					background-image: radial-gradient(circle, rgba(83, 173, 237, 1) 12%, rgba(255, 243, 110, 1) 50%, rgba(83, 173, 237, 1) 74%);}
+
+		.bg-dw{background-image: url(https://media.giphy.com/media/3ohhwfdwNYzXGAy6ju/giphy.gif?cid=ecf05e479febbmste10sdertgymlddbp9ijqiao2bqrr0830&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+		}
+
+		.bg-type{background: #ffabd1;
+		background: linear-gradient(0deg, rgba(255, 171, 209, 1) 0%, rgba(255, 255, 255, 1) 55%);}
+
+		.bg-work{background: #53ADED;
+		background: linear-gradient(0deg, rgba(83, 173, 237, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 90%, rgba(83, 173, 237, 1) 100%);}
+
+		.bg-last{background: #53ADED;
+		background: linear-gradient(180deg, rgba(83, 173, 237, 1) 0%, rgba(255, 255, 255, 1) 77%);}
+
+		.bg-foot{background: #53ADED;
+		background: linear-gradient(0deg, rgba(83, 173, 237, 1) 0%, rgba(255, 255, 255, 1) 77%);}
+
+		#navbar {background-color: rgba(255, 255, 255, 0.5);
+				backdrop-filter: blur(10px);
+				position: fixed;	
+			 	width: 100%;
+			 	z-index: 100;
+			 	padding: 10px;
+			 }
+
+
+		ul,li{list-style: none;}
+		ul li a{text-decoration: none;
+				display: block;
+				padding: 8px 12px;
+				color:black;
+				font-family: 'NanumGothic';}
+		ul li a:hover {background: black; color:white; transition: all 1s;}
+		strong{font-family: 'NanumGothicBold';}
+		
+		#headerF{
+			margin: auto;
+			width: 800px;
+			transform: translateX(0px);
+			animation: floating 3s ease-in-out infinite;
+		}
+
+		@keyframes floating{
+			0% { 
+				transform: translateY(0px);
+			}
+			50%{
+				transform: translateY(-50px);
+			}
+			100%{
+				 transform: translateY(0px);
+			}
+		}
+
+
+		#s1 {scroll-margin-top: 60px;}
+		#s2 {scroll-margin-top: 60px;}
+		#s3 {scroll-margin-top: 60px;}
+		#s4 {scroll-margin-top: 60px;}
+		#s5 {scroll-margin-top: 60px;}
+
+
+		.end02{background: url('clock.png');
+  			background-attachment: fixed;
+			background-size: 680px 548px;
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: translateZ(0);
+			height: 100vh}
+		
+		.pro{
+			text-align: left;
+			line-height: 1.3;
+			}
+		.pro1{position: absolute;
+			text-align: center;
+			line-height: 1.3;
+			left: 210px; top: 1650px;}
+	
+
+
+		.box{border: 1px solid black; 
+			border-radius: 50px; 
+			background-color: white;
+			margin:200px; 
+			padding: 10px 20px;
+			text-align: center;
+			
+			}
+		.boxE{ width: 45%;
+			border-radius: 50px; 
+			margin:auto; 
+			padding: 10px 20px;
+			text-align: center;
+			font-family: 'NanumGothic';
+			line-height: 1.4;
+			color: #53ADED;
+			box-shadow: 0 5px 5px #9CD6FF;
+
+			}
+		.boxE-1{ width: 10%;
+			border-radius: 50px;
+			border: 1px solid skyblue;  
+			background-color: white;
+			
+			padding: 6px 16px;
+			text-align: center;
+			}
+
+
+		.r-spc{margin-right: 650px;  margin-bottom: 30px;}
+		.c-spc{padding-left: 100px; padding-right: 100px; padding-top: 30px;padding-bottom: 30px;
+			text-align: center}
+
+		.list01{
+			position: relative;
+			text-align: center;
+			line-height: 1.3;
+       		width: 30%;                
+   			font-family:'NanumGothic';
+			font-size: 2rem;
+			margin:auto;
+		}
+		.list02{position: absolute;
+			text-align: center;
+			line-height: 1.3;
+			left: 282px; top: -80px;
+			font-family:'NanumGothic';
+			font-size: 2rem
+		}
+
+		.lil{position: absolute;
+			text-align: center;
+			line-height: 1;
+			font-family:'NanumGothic';
+			font-size: 2rem}
+
+		.img1{background: url('fairy1.png');
+			background-attachment: fixed;
+			background-size: 800px ;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: 50vh;
+			z-index: 2}
+		.img2{background: url('fairy2.png');
+			background-attachment: fixed;
+			background-size: 800px ;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: 50vh;
+			z-index: 2}
+		.img3{background: url('fairy3.png');
+			background-attachment: fixed;
+			background-size: 800px ;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: 80vh;
+			z-index: 2}
+
+		.bora{	width: 40%; height: 40%;
+				border: 2px solid #9CD6FF;;
+				padding: 0;
+			}
+
+		.imgh-left{position: absolute;
+			left: -224px;
+			top: -340px;
+			width: 500px; height: 500px;
+
+		}
+		.imgh-right{position: absolute;
+			left: 594px;
+			top: -340px;
+			width: 500px; height: 500px;
+			}
+
+
+		.img-who{
+				display: block; width:50%; height:50%;
+				margin-left: auto;
+  				margin-right: auto;
+			}
+
+		.two{	width: 40%;
+			    
+			    position: -webkit-sticky;
+			    position: sticky;
+			    height: 100vh;
+			    top:0;
+			    padding:70px 0 0 12px;
+			    text-align:center;
+			    z-index: -1;
+			    margin: auto;
+			}
+
+		div.scroll-container {
+			  background-color: transparent;
+			  overflow: auto;
+			  white-space: nowrap;
+			  padding: 30px;
+			}
+	
+		.scroll-container {
+			  overflow-x: auto;
+			  overflow-y: hidden;
+			  white-space: nowrap;
+			  padding: 10px;
+			  scroll-behavior: smooth;
+			}
+
+		.scroll-item {
+			  display: inline-block;
+			  position: relative;
+			  width: 300px;
+			  margin-right: 10px;
+			}
+
+		.scroll-item img {
+			  width: 100%;
+			  display: block;
+			  border-radius: 10px;
+			}
+
+		.overlay-text {
+			  position: absolute;
+			  top: 10%; left: 50%;
+			  transform: translate(-50%, -50%);
+			  color: white; 
+			  font-size: 1rem;
+			  font-family: 'NanumGothic';
+			  line-height: 1.2rem;
+			  text-align: center;
+			  text-shadow: 1px 1px 4px black; 
+			  pointer-events: none;
+			}
+
+
+			.overlay-text3 {
+			  position: absolute;
+			  top: 90%; left: 50%;
+			  transform: translate(-50%, -50%);
+			  color: white; 
+			  font-size: 1rem;
+			  font-family: 'NanumGothic';
+			  line-height: 1.2rem;
+			  text-align: center;
+			  text-shadow: 1px 1px 4px black; 
+			  pointer-events: none;
+			}
+
+		.left-spacing{padding-left: 260px;}
+		.right-spacing{padding-right: 260px;}
+		.center-spacing{padding-left: 100px; padding-right: 100px; text-align: center}
+
+		.flex3{display: flex; flex-wrap: wrap}
+		.w30{width: 33%}
+		.center-spacing3 {text-align: center;}
+
+		.white{color: white}
+			.marquee-wrapper {
+		  width: 100%;
+		  overflow: hidden;
+			}
+
+		.marquee-content {
+		  display: flex;
+		  width: max-content;
+		  animation: scroll-left 20s linear infinite;
+		}
+
+		.item {
+		  flex: 0 0 auto;
+		  background: white;
+		  padding: 20px;
+		  margin: 10px;
+		  border-radius: 10px;
+		  min-width: 200px;
+		  text-align: left;
+		  line-height: 1.2rem;
+		  font-family: 'NanumGothicLight';
+		  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+		}
+		@keyframes scroll-left {
+	 		 0% {transform: translateX(0);}
+	  		100% {transform: translateX(-50%); } }
+		
+
+		.button {
+            
+            margin-left: 400px;
+            border-radius: 20px;
+        }
+        .button:hover {
+            color: #111;
+            transition: all 1s;
+            box-shadow: 0 0 20px #9CD6FF;
+        }
+
+        .button-b {background-color: #9CD6FF;
+        	text-align: center;
+        	padding: 15px 25px;
+        	width: 300px;
+        	margin: auto;
+        }
+
+        .dragx{user-select: none;}
+	</style>
+</head>
+
+<body>
+	<nav id="navbar">
+		<div class="wrap flex"> 
+			<div class="logo">
+				<h1>잠케어</h1>			
+			</div>
+			<ul class="flex">
+				<li><a href="#s1">잠요정이란</a></li>
+				<li><a href="#s2">기능</a></li>
+				<li><a href="#s4">후기</a></li>
+				<li><a href="#s5">구독하기</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header class="bg-header center-spacing" style="padding:0">
+		<img id="headerF" src="fairy3d-W.png">
+	</header>
+
+	<section style="box-shadow:0 0 20px 20px yellow inset; padding-top: 0;">
+		<div style="padding: 50px;">
+			<div class="wrap flex3">
+				<img class=w30 src="s-01.png">
+				<img class=w30 src="s-02.png">
+				<img class=w30 src="s-03.png">
+				<p class="center-spacing3 w30">자기 싫어서 계속 버티다 <strong>기절</strong></p>
+				<p class="center-spacing3 w30">늦잠 자서 <strong>지각</strong></p>
+				<p class="center-spacing3 w30">결국 졸면서 하루를 <strong>망치기</strong></p>
+				<br><br>
+			</div>
+		</div>
+	</section>
+
+	<div class="wrap">
+		<br><br><br>
+		<h1 style="text-align: center";><em>혹시, <br>내 얘기 같으신가요?!</em></h1>
+		<br><br><br>
+	</div>
+
+	<section class="bg-dw" style="box-shadow:0 0 20px 20px white inset;">
+		<div class="wrap">
+			<br><br><br>
+			<h3 class="center-spacing"><span style="background-color:yellow;">&nbsp;그런 생활은 이제 안녕!&nbsp;</span></h3>
+			<img src="fairy.png" class="img-who center-spacing">
+			<h3 class="center-spacing white";>잠요정이 당신의 완벽한 하루를 <br><em>책임집니다.</em></h3>
+			<br><br><br>
+		</div>
+
+	</section>
+
+<br><br><br><br><br><br>
+
+	<section>
+		<div class="wrap">
+			<div class="list01" id="s1"> <span style="background-color:#9CD6FF;">잠요정이란?</span></div>
+			<br><br>
+			<div class="pro flex " style="box-shadow:0 0 15px 15px yellow inset; padding: 15px; border-radius: 20px;">
+					<img src="clock.png" class="w50">
+					<p class="w50"><br><br><br><br>
+						<span style="background-color:white;">잠요정은 여러분의 건강한 수면 라이프를 위해 <br>고용된 <strong>프로 요정</strong>입니다. </span></p>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-type">
+		<div class="wrap ">
+			<p class="lil two" style="border: 0px;">잠요정의 종류</p>
+			<div class=" img1"></div>
+			<div class=" img2"></div>
+			<div class=" img3"></div>
+		</div>
+	</section>
+
+
+	<section class="bg-work">
+		<div class="wrap"> 
+			<div class="list01" id="s2"> 
+			<span style="background-color:#9CD6FF;">잠요정의 기능</span></div>
+			<br><br><br><br>
+			<div class="boxE-1 r-spc">기상형</div>
+
+			<div class="boxE">기상 시각의 30분 전에 방문하여<br> 기상 시각까지 기다린 후 고객님을 깨워드립니다.</div>
+
+			<div class="scroll-container">
+				<div class="scroll-item">
+					<img src="w-01.gif" class="bora">
+					<div class="overlay-text"><strong>요정이 깨우기 전에 <br>일어나지 못한 경우</strong></div> 
+					<div class="overlay-text3">락 음악을 연주하거나</div> </div>
+				<div class="scroll-item">
+					<img src="w-02.png" class="bora">
+					<div class="overlay-text3">물거나</div> </div>
+				<div class="scroll-item">
+					<img src="w-03.png" class="bora">
+					<div class="overlay-text3">냉수를 뿌려서라도,<br> <strong>깨워드립니다.</strong></div> </div>
+				</div>
+
+			<br><br><br>
+
+			<div class="boxE-1 r-spc">취침형</div>
+
+			<div class="boxE">취침 시각의 30분 전에 방문하여 취침 시각까지 고객님이 잠에 들 수 있도록 도와드립니다.</div>
+
+			<div class="scroll-container">
+				<div class="scroll-item">
+					<img src="ss-01.png" class="bora">
+					<div class="overlay-text"><strong>잠이 오지 않을 때는</strong></div> 
+					<div class="overlay-text3">자장가를 부르거나</div> </div>
+
+				<div class="scroll-item">
+					<img src="ss-02.png" class="bora">
+					<div class="overlay-text3">따뜻한 차를 끓여주고</div> </div>
+
+				<div class="scroll-item">
+					<img src="ss-03.png" class="bora">
+					<div class="overlay-text3">옛날 이야기를 들려줍니다.</div> </div>
+
+				<div class="scroll-item">
+					<img src="ss-04.png" class="bora">
+					<div class="overlay-text"><strong>잠들기 싫은 날에는</strong></div> 
+					<div class="overlay-text3">스마트폰 화면을 가리거나</div> </div>
+
+				<div class="scroll-item">
+					<img src="ss-05.png" class="bora">
+					<div class="overlay-text3">야식을 숨깁니다.</div> 
+			</div>
+			
+		</div>
+		<br><br><br><br>
+	</section>
+
+	</section>
+
+	<section class="bg-last">
+		<div class="wrap" style="box-shadow: 0 0 10px 10px white inset; border-radius: 20px; padding-top:30px; padding-bottom:30px;">
+			<div class="list01" id="s4"> 
+			<strong><span style="color:white">&nbsp;후기&nbsp;</span></strong></div>
+			<br><br>
+
+			<div class="marquee-wrapper" style="color: #53ADED">
+  				<div class="marquee-content">
+    				<div class="item">
+    					★★★★★<br><br> 
+    					잠요정중독 님<br>
+						생각보다 도움이 많이 됐어요. <br>귀엽고 상냥해서 마음이 치유되는 기분이에요ㅎㅎ 
+						<br> 당분간은 계속 구독할 것 같네요 
+					</div>
+					<div class="item">
+    					★★★★★<br><br> 
+    					집에갈래 님<br>
+						제가 정말 뺨 때려도 잘 못 일어나는데 <br>잠요정은 절 100%의 확률로 깨워주네요 <br>정말 최고예요! 
+					</div>
+					<div class="item">
+    					★★★★<br><br> 
+    					졸려 님<br>
+						자기 싫을 때 귀여운 애가 절 재우려고 애쓰는 걸 <br>보면 미안해서라도 자게 되더라고요 ㅎㅎ<br> 수면패턴 돌리는 데 효과 만점이에요!
+					</div>
+					<div class="item">
+    					★★★★★<br><br> 
+    					반짝반짝 님<br>
+						졸음방지 서비스가 킥이네요. <br>원래는 자주 졸았는데 졸음방지 서비스 덕분에 <br>요즘은 졸지 않아요!
+					</div>
+					<div class="item">
+    					★★★★★<br><br> 
+    					잠요정중독 님<br>
+						생각보다 도움이 많이 됐어요. <br>귀엽고 상냥해서 마음이 치유되는 기분이에요ㅎㅎ 
+						<br> 당분간은 계속 구독할 것 같네요 
+					</div>
+					<div class="item">
+    					★★★★★<br><br> 
+    					집에보내줘 님<br>
+						제가 정말 뺨 때려도 잘 못 일어나는데 <br>잠요정은 절 100%의 확률로 깨워주네요 <br>정말 최고예요! 
+					</div>
+					<div class="item">
+    					★★★★<br><br> 
+    					졸려 님<br>
+						자기 싫을 때 귀여운 애가 절 재우려고 애쓰는 걸 <br>보면 미안해서라도 자게 되더라고요 ㅎㅎ<br> 수면패턴 돌리는 데 효과 만점이에요!
+					</div>
+					<div class="item">
+    					★★★★★<br><br> 
+    					반짝반짝 님<br>
+						졸음방지 서비스가 킥이네요. <br>원래는 자주 졸았는데 졸음방지 서비스 덕분에 <br>요즘은 졸지 않아요!
+					</div>
+
+    			</div>
+			</div>
+			<br><br>
+		</div>
+
+		<div class="wrap" id="s5">
+			<br><br><br>
+			<h3 class="center-spacing">다음 후기의 주인공이 되어 보세요!</h3>
+			<br><br>
+			<div class="container">
+			 <p style="font-size: 1.8rem; font-weight:600; color: white;" class="button button-b dragx">구독하기</p>
+		    </div>
+		</div>
+
+
+	</section>
+
+
+</body>
+		<footer style="color:gray" class="bg-foot">
+		<div class="wrap center-spacing">
+		잠요정&copy;잠케어
+		</div>
+	</footer>
+</html>
